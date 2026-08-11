@@ -295,10 +295,10 @@ export default function Home() {
               growth.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#contact">
+              <a className="button button-primary" href="/contact">
                 Get free consultation <span>↗</span>
               </a>
-              <a className="button button-light" href="#portfolio">
+              <a className="button button-light" href="/portfolio">
                 Explore our work <span>↓</span>
               </a>
             </div>
@@ -367,7 +367,7 @@ export default function Home() {
                 </div>
                 <h3>{title}</h3>
                 <p>{text}</p>
-                <a className="text-link" href="#contact">
+                <a className="text-link" href="/services">
                   Learn more <span>→</span>
                 </a>
               </article>
@@ -398,7 +398,7 @@ export default function Home() {
                 <small>For {title}</small>
                 <h3>{title}</h3>
                 <p>{text}</p>
-                <a className="text-link" href="#contact">
+                <a className="text-link" href="/solutions">
                   {link} →
                 </a>
               </article>
@@ -550,7 +550,7 @@ export default function Home() {
               create room for growth. That is the standard we bring to every
               project.
             </p>
-            <a className="text-link" href="#contact">
+            <a className="text-link" href="/why-us">
               Talk to our team <span>→</span>
             </a>
           </div>
@@ -674,7 +674,7 @@ export default function Home() {
                   <strong>{price}</strong>
                 </div>
                 <p>{text}</p>
-                <a className="text-link" href="#contact">
+                <a className="text-link" href="/contact">
                   Get exact quote <span>→</span>
                 </a>
               </article>
@@ -698,7 +698,7 @@ export default function Home() {
               Still have a question? Tell us what you are planning and our team
               will guide you.
             </p>
-            <a className="text-link" href="#contact">
+            <a className="text-link" href="/contact">
               Ask us anything →
             </a>
           </div>

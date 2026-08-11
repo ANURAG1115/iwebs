@@ -20,8 +20,8 @@ const routes = {
 }
 
 const getRoute = () => {
-  const hash = window.location.hash
-  return hash.startsWith('#/') ? hash.slice(1).split('?')[0] : '/'
+  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+  return path
 }
 
 function App() {
@@ -32,8 +32,8 @@ function App() {
       setRoute(getRoute())
       window.scrollTo({ top: 0, behavior: 'instant' })
     }
-    window.addEventListener('hashchange', handleRoute)
-    return () => window.removeEventListener('hashchange', handleRoute)
+    window.addEventListener('popstate', handleRoute)
+    return () => window.removeEventListener('popstate', handleRoute)
   }, [])
 
   const Page = routes[route] || Home
