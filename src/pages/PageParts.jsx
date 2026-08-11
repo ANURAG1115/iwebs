@@ -1,4 +1,5 @@
 import './Pages.css'
+import { routePath } from '../routePaths'
 
 export function PageHero({ kicker, title, description, points, image, imageAlt = '', imageLabel }) {
   return (
@@ -9,7 +10,7 @@ export function PageHero({ kicker, title, description, points, image, imageAlt =
           <h1>{title}</h1>
           <p>{description}</p>
           <div className="page-actions">
-            <a className="button button-primary" href="/contact">Discuss your project ↗</a>
+            <a className="button button-primary" href={routePath('/contact')}>Discuss your project ↗</a>
             <a className="button button-light" href="tel:+919999107112">Call 9999107112</a>
           </div>
         </div>
@@ -46,5 +47,5 @@ export function ProcessSection() {
 }
 
 export function PageCta({ title = 'Have a project in mind?', text = 'Tell us what you want to improve. We will suggest a practical way forward.' }) {
-  return <section className="page-cta"><div className="page-container"><div className="page-cta-box"><div><h2>{title}</h2><p>{text}</p></div><a className="button button-white" href="/contact">Get a free consultation ↗</a></div></div></section>
+  return <section className="page-cta"><div className="page-container"><div className="page-cta-box"><div><h2>{title}</h2><p>{text}</p></div><a className="button button-white" href={routePath('/contact')}>Get a free consultation ↗</a></div></div></section>
 }

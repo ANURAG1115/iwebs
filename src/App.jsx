@@ -8,6 +8,7 @@ import Portfolio from './pages/Portfolio'
 import WhyUs from './pages/WhyUs'
 import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
+import { getCurrentRoute } from './routePaths'
 
 const routes = {
   '/': Home,
@@ -19,17 +20,12 @@ const routes = {
   '/contact': Contact,
 }
 
-const getRoute = () => {
-  const path = window.location.pathname.replace(/\/+$/, '') || '/'
-  return path
-}
-
 function App() {
-  const [route, setRoute] = useState(getRoute)
+  const [route, setRoute] = useState(getCurrentRoute)
 
   useEffect(() => {
     const handleRoute = () => {
-      setRoute(getRoute())
+      setRoute(getCurrentRoute())
       window.scrollTo({ top: 0, behavior: 'instant' })
     }
     window.addEventListener('popstate', handleRoute)

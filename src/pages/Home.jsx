@@ -22,6 +22,7 @@ import awsLogo from "../assets/technologies/aws.svg";
 import gitLogo from "../assets/technologies/git.svg";
 import dockerLogo from "../assets/technologies/docker.svg";
 import figmaLogo from "../assets/technologies/figma.svg";
+import { routePath } from "../routePaths";
 
 const services = [
   [
@@ -295,10 +296,10 @@ export default function Home() {
               growth.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="/contact">
+              <a className="button button-primary" href={routePath('/contact')}>
                 Get free consultation <span>↗</span>
               </a>
-              <a className="button button-light" href="/portfolio">
+              <a className="button button-light" href={routePath('/portfolio')}>
                 Explore our work <span>↓</span>
               </a>
             </div>
@@ -367,7 +368,7 @@ export default function Home() {
                 </div>
                 <h3>{title}</h3>
                 <p>{text}</p>
-                <a className="text-link" href="/services">
+                <a className="text-link" href={routePath('/services')}>
                   Learn more <span>→</span>
                 </a>
               </article>
@@ -398,7 +399,7 @@ export default function Home() {
                 <small>For {title}</small>
                 <h3>{title}</h3>
                 <p>{text}</p>
-                <a className="text-link" href="/solutions">
+                <a className="text-link" href={routePath('/solutions')}>
                   {link} →
                 </a>
               </article>
@@ -550,7 +551,7 @@ export default function Home() {
               create room for growth. That is the standard we bring to every
               project.
             </p>
-            <a className="text-link" href="/why-us">
+            <a className="text-link" href={routePath('/why-us')}>
               Talk to our team <span>→</span>
             </a>
           </div>
@@ -674,7 +675,7 @@ export default function Home() {
                   <strong>{price}</strong>
                 </div>
                 <p>{text}</p>
-                <a className="text-link" href="/contact">
+                <a className="text-link" href={routePath('/contact')}>
                   Get exact quote <span>→</span>
                 </a>
               </article>
@@ -698,7 +699,7 @@ export default function Home() {
               Still have a question? Tell us what you are planning and our team
               will guide you.
             </p>
-            <a className="text-link" href="/contact">
+            <a className="text-link" href={routePath('/contact')}>
               Ask us anything →
             </a>
           </div>
