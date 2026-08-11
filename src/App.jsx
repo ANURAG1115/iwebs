@@ -9,6 +9,7 @@ import WhyUs from './pages/WhyUs'
 import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
 import { getCurrentRoute } from './routePaths'
+import Seo from './components/Seo'
 
 const routes = {
   '/': Home,
@@ -36,6 +37,7 @@ function App() {
 
   return (
     <>
+      <Seo route={route} />
       <Header currentRoute={route} />
       <Page />
       <Footer />
